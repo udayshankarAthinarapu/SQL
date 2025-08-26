@@ -1,0 +1,27 @@
+-- Creating DataBase--
+CREATE database college;
+
+-- To Use the database for CRUD operations --
+USE  college;
+
+-- DROPING a Databse--
+DROP database college;
+
+SHOW Databases;
+
+-- CREATING a Table--
+CREATE TABLE faculty(
+emp_id varchar(10),
+emp_age int,
+emp_name varchar(30));
+
+
+SELECT * from faculty;
+
+-- INSERT--
+insert into faculty values
+(001,22,'uday'),
+(002,23,'sai'),
+(003,24,'mahi'),
+(004,22,'yash');
+
