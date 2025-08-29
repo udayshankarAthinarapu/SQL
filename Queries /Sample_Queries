@@ -25,3 +25,47 @@ insert into faculty values
 (003,24,'mahi'),
 (004,22,'yash');
 
+
+create table student (stu_id int, stu_name varchar(30),marks int);
+
+select * from student;
+
+insert into student (stu_id , stu_name , marks) values 
+(001,'abc',40),
+(002,'asd',50),
+(003,'qwe',45);
+select * from student;
+
+SELECT * from faculty;
+
+    -- UPDATE --
+update faculty set emp_age =23 WHERE emp_id=002;
+
+    -- DELETE --
+Delete FROM faculty  Where emp_id=002;
+
+      -- ADD --
+ALTER TABLE faculty add emp_designation varchar(20);
+
+    -- DROP --
+ALTER TABLE faculty DROP emp_designation;
+
+SELECT * from faculty;
+
+     -- MODIFY --
+ALTER TABLE faculty MODIFY emp_designation varchar(30);
+
+       -- RENAME COLUMN --
+ALTER TABLE faculty RENAME column emp_designation to emp_desi;
+
+      -- RENAME TABLE --
+ALTER TABLE faculty RENAME to Employee;
+
+SELECT * FROM employee;
+
+-- Truncate --
+TRUNCATE table employee;
+SELECT * from employee;
+
+-- DROP TABLE --
+DROP table employee;
