@@ -1,0 +1,519 @@
+######  🔹 **What is Data?**
+
+Data is a collection of raw facts and figures that, when processed, provide meaningful information. In the context of databases and SQL, data refers to the values stored in tables.
+
+
+
+###### **🔹 How is Data Stored in SQL?**
+
+Data in SQL is organized in a relational database, which uses tables to store information.
+
+
+
+* Tables consist of rows and columns
+* A row (also called a record) represents a single entry
+* A column represents a data field or attribute
+* Each column has a specific data type (e.g., INT, VARCHAR, DATE)
+
+
+
+**🔹 Example Table: Students**
+
+
+
+**ID	Name	Age	Grade**
+
+**1	Alice	20	A**
+
+**2	Bob	22	B**
+
+
+
+**ID**: Unique identifier (usually an integer)
+
+**Name**: Student’s name (text)
+
+**Age**: Student’s age (integer)
+
+**Grade**: Letter grade (text)
+
+
+
+###### **🔹 Types of Data in SQL**
+
+
+
+**| Data Type | Description          | Example      |**
+
+**| --------- | -------------------- | ------------ |**
+
+**| `INT`     | Integer number       | 25           |**
+
+**| `VARCHAR` | Variable-length text | "Alice"      |**
+
+**| `DATE`    | Date value           | 2025-08-10   |**
+
+**| `BOOLEAN` | True or False value  | TRUE / FALSE |**
+
+**| `FLOAT`   | Decimal number       | 3.14         |**
+
+
+
+
+
+
+
+###### **🔹What is a Database?**
+
+
+
+A database is an organized collection of related data that can be easily accessed, managed, and updated.
+
+It stores data in a structured format, usually in the form of tables, and allows users to perform operations such as insert, update, delete, and query the data.
+
+
+
+🔹 **Key Features of a Database**
+
+*  Stores large amounts of data efficiently
+*  Supports easy data access and retrieval
+*  Maintains data accuracy and integrity
+*  Allows multiple users to access data simultaneously
+*  Offers security and backup features
+
+
+
+**🔹 Components of a Database:**
+
+
+
+**| Component            | Description**                                 **|**
+
+**| -------------------- | ------------------------------------------- |**
+
+|   **Tables**             | Store data in rows and columns              |
+
+|   **Fields (Columns)**   | Define the type of data stored              |
+
+|   **Records (Rows)**     | Individual entries in the table             |
+
+|   **Keys**               | Uniquely identify data (e.g., Primary Key)  |
+
+|   **Schema**             | Structure that defines the database objects |
+
+
+
+🔹 **Example: Simple Students Database**
+
+
+
+**| ID | Name  | Age | Grade |**
+
+**| -- | ----- | --- | ----- |**
+
+| 1  | Alice | 20  | A     |
+
+| 2  | Bob   | 22  | B     |
+
+
+
+###### **🔹 Types of Databases :**
+
+
+
+**| Type                   | Description                                       |**
+
+**| ---------------------- | ------------------------------------------------- |**
+
+|   **Relational (RDBMS)**   | Data stored in tables; uses SQL                   |
+
+|   **NoSQL**                | Non-tabular format (e.g., documents, key-value)   |
+
+|   **Cloud Databases**      | Hosted online, scalable (e.g., AWS RDS, Firebase) |
+
+
+
+
+
+###### **🔹 What is DBMS?**
+
+
+
+A Database Management System (DBMS) is software that helps create, manage, and manipulate databases.
+
+It allows users to store, retrieve, update, and delete data efficiently while maintaining data integrity and security.
+
+
+
+🔹 **Examples of Database Software**
+
+* MySQL
+* PostgreSQL
+* SQLite
+* Microsoft SQL Server
+* Oracle Database
+
+
+
+###### **🔹 Why DBMS?**
+
+
+
+⦁ Data Storage – Stores large volumes of data efficiently.
+
+⦁ Data Abstraction – Hides the complexity of data storage from users.
+
+⦁ Controls Data Redundancy – Minimizes duplicate data.
+
+⦁ Multi-user Access and Views – Supports concurrent access with personalized views.
+
+⦁ Security – Protects data through authentication and authorization.
+
+
+
+###### **🔹 Data Models**
+
+
+
+Data models define how the logical structure of a database is modelled.
+
+They also define how data is connected to each other, how it is processed, and stored inside the system.
+
+
+
+###### **🔹Types of Data Models:**
+
+
+
+1. **Hierarchical Model**
+   Organizes data in a tree-like structure.
+   Each record has a parent-child relationship.
+2. **Network Model**
+   Uses a graph structure with nodes (records) and edges (relationships).
+   Records can have multiple parent and child records.
+3. **Entity Relationship (ER) Model**
+   Uses entities (objects) and relationships to describe data.
+   Commonly used in database design before converting to a relational model.
+4. **Relational Model**
+   Organizes data into tables (relations) with rows (tuples) and columns (attributes).
+   Uses keys to establish relationships between tables.
+5. **NoSQL Model**
+   Designed for unstructured or semi-structured data.
+
+   Types include document-based, key-value, column-oriented, and graph databases.
+
+
+
+###### **🔹SQL (Structured Query Language)**
+
+
+
+SQL is the standard language used to store, manipulate, and retrieve data in relational databases.
+
+
+
+* It is a database programming language used for the retrieval and management of data in a relational database.
+* All Relational Database Management Systems (RDBMS) like MySQL, Oracle, MS Access, and SQL Server use SQL as their standard database language.
+
+
+
+###### **🔹What SQL Does?**
+
+
+
+* **Create Databases \& Tables –** SQL can be used to create new databases and tables to store data.
+* **Execute Queries –** SQL can run queries against a database to fetch specific information.
+* **Manage Data –** SQL can retrieve, update, delete, and insert records into tables.
+* **Create Stored Procedures \& Views –** SQL allows defining reusable queries and stored logic.
+* **Set Permissions** **–** SQL can grant or revoke access rights on tables, views, and procedures.
+
+
+
+
+
+##### **comparison between DBMS and SQL**
+
+
+
+**| \*\*Feature\*\*    | \*\*DBMS\*\*  (Database Management System)                  | \*\*SQL\*\* (Structured Query Language)                           |**
+
+**| -------------- | --------------------------------------------------------| ------------------------------------------------------------- |**
+
+**|   Definition   | DBMS  is software that manages and organizes databases. | SQL is a language used to interact with databases.	           |**
+
+**| \*\*Function\*\*   | Stores, retrieves, updates, and manages data.           | Creates, queries, updates, and manipulates data inside a DBMS.|**
+
+**| \*\*Type\*\*       | A tool/system.                                          | A query language.                                             |**
+
+**| \*\*Examples\*\*   | MySQL, Oracle, PostgreSQL, MS Access, MongoDB.          | `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`.             |**
+
+**| \*\*Usage\*\*      | Provides the environment to store and manage data.      | Used inside DBMS to perform operations on data.               |**
+
+**| \*\*Dependency\*\* | Can work without SQL (e.g., NoSQL DBMS like MongoDB).   | Cannot work without a DBMS.                                   |**
+
+**| \*\*Analogy\*\*    | DBMS = kitchen (where food is prepared).                | SQL = chef’s instructions (how to cook the food).             |**
+
+
+
+
+
+###### **🔹 Types of SQL Commands with Examples**
+
+
+
+###### **1. DDL (Data Definition Language)** – Defines the database structure.***\[C A T D]***
+
+* **CREATE, ALTER, DROP, TRUNCATE.**
+
+
+
+**| \*\*Command\*\*  | 			    Definition                          | 		  Purpose                                |             Example                            |**
+
+**| ------------ | -------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------- |**
+
+**| \*\*CREATE\*\*   | Creates new database objects like tables, databases, or views. | To define and add new structures to the database.      | CREATE TABLE Products (ProductID INT,**
+
+ 																	   **ProductName VARCHAR(100), Price DECIMAL(10,2));|**
+
+
+
+**| \*\*ALTER\*\*    | Modifies the structure of an existing object.                  | To add, modify, or delete columns.                     | ALTER TABLE Products ADD Category VARCHAR(50); |**
+
+**| \*\*DROP\*\*     | Deletes database objects permanently.                          | To remove objects that are no longer needed.           | DROP TABLE Products;				  |**
+
+**| \*\*TRUNCATE\*\* | Deletes all data from a table but keeps its structure.         | To quickly remove all rows without deleting the table. | TRUNCATE TABLE Products;   			  |**
+
+
+
+###### **2. DML (Data Manipulation Language)** – Manages data within tables.***{S I D U}***
+
+* **SELECT, INSERT, DELETE, UPDATE**
+
+
+
+**| \*\*Command\*\* | \*\*Definition\*\*                          | \*\*Purpose\*\*                                                |   \*\*Example\*\*          					     |**
+
+**| ----------- | --------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------- |**
+
+**|   SELECT    | Retrieves data from one or more tables. | To fetch specific columns, rows, or aggregated results.    | `SELECT ProductName, Price FROM Products WHERE Price > 50000; |**
+
+**|   INSERT    | Adds new records (rows) into a table.   | To insert data into the database.                          | `INSERT INTO Products (ProductID, ProductName, Price, Stock)**
+
+ 													        	**VALUES (1, 'Laptop', 55000, 10);**  |
+
+
+
+**|   UPDATE    | Modifies existing records in a table.   | To change stored data.                                     | `UPDATE Products SET Price = 50000 WHERE ProductID = 1;`	     |**
+
+**|   DELETE    | Removes records from a table.           | To delete specific data while keeping the table structure. | `DELETE FROM Products WHERE ProductID = 1;`		     |**
+
+
+
+###### **3. DCL (Data Control Language)** – Controls access and permissions.
+
+* **GRANT, REVOKE**
+
+
+
+**| \*\*Command\*\* | \*\*Definition\*\*                                          | \*\*Purpose\*\*                                | \*\*Example\*\*                                  |**
+
+**| ----------- | ------------------------------------------------------- | ------------------------------------------ | -------------------------------------------- |**
+
+**|   GRANT     | Gives specific privileges to users on database objects. | To allow users to perform certain actions. | `GRANT SELECT, INSERT ON Products TO user1;` |**
+
+**|   REVOKE    | Removes previously granted privileges from users.       | To restrict user access.                   | `REVOKE INSERT ON Products FROM user1;`      |**
+
+
+
+###### **4. TCL (Transaction Control Language)** – Manages transactions.
+
+
+
+**|  Command  |                             Definition                                        |                              Use Case                                     | \*\*Example\*\***
+
+**| --------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------- |**
+
+**| COMMIT    | Saves all changes made during the transaction permanently to the database.    | When you want to make sure your changes are stored.                       | `COMMIT;`	   |**
+
+**| ROLLBACK  | Undoes changes made during the current transaction before they are committed. | When an error occurs and you need to revert changes.                      | `ROLLBACK;`      |**
+
+**| SAVEPOINT | Creates a named point in a transaction that you can roll back to later.       | When you want partial rollbacks instead of undoing the whole transaction. | `SAVEPOINTsp1;   																					 `ROLLBACK TO sp1;`|**
+
+
+
+##### **🔹DATA TYPES**
+
+
+
+**| \*\*Category\*\*         | \*\*Data Type\*\*                   | \*\*Definition\*\*                                        | \*\*Example Value\*\*        |**
+
+**| -------------------- | ------------------------------- | ----------------------------------------------------- | ------------------------ |**
+
+**| \*\*Numeric\*\*          | `INT` / `INTEGER`               | Whole numbers.                                        | `100`                    |**
+
+**|                      | `DECIMAL(p,s)` / `NUMERIC(p,s)` | Fixed-point numbers with precision `p` and scale `s`. | `123.45`                 |**
+
+**|                      | `FLOAT` / `REAL`                | Approximate decimal numbers.                          | `3.14159`                |**
+
+**| \*\*Character/String\*\* | `CHAR(n)`                       | Fixed-length string (padded with spaces if shorter).  | `'Hello '`               |**
+
+**|                      | `VARCHAR(n)`                    | Variable-length string (up to `n` characters).        | `'Hello'`                |**
+
+**|                      | `TEXT`                          | Large amount of text.                                 | `"This is a paragraph."` |**
+
+**| \*\*Date/Time\*\*        | `DATE`                          | Stores date in `YYYY-MM-DD` format.                   | `2025-08-10`             |**
+
+**|                      | `TIME`                          | Stores time in `HH:MM:SS` format.                     | `14:35:00`               |**
+
+**|                      | `DATETIME` / `TIMESTAMP`        | Stores date and time.                                 | `2025-08-10 14:35:00`    |**
+
+**| \*\*Boolean\*\*          | `BOOLEAN`                       | True/False values.                                    | `TRUE`                   |**
+
+**| \*\*Binary\*\*           | `BLOB`                          | Binary large objects (images, files, etc.).           | (image data)             |**
+
+
+
+##### **🔹SQL Constraints**
+
+
+
+SQL Constraints are **rules** applied to table columns to ensure the accuracy, validity, and reliability of the data stored in a database.
+
+They control what kind of values can be inserted, updated, or deleted in a table, preventing invalid data entry.
+
+**-**
+
+**| Constraint      |                          Definition                                      |                         Example                                  |**
+
+**| --------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------- |**
+
+**|   NOT NULL      | Ensures a column cannot have `NULL` (empty) values.                      | `CREATE TABLE Products (ProductID INT NOT NULL);`                |**
+
+**|   UNIQUE        | Ensures all values in a column are different.                            | `CREATE TABLE Users (Email VARCHAR(100) UNIQUE);`                |**
+
+**|   PRIMARY KEY   | Uniquely identifies each record in a table (combines NOT NULL + UNIQUE). | `CREATE TABLE Customers (ID INT PRIMARY KEY, Name VARCHAR(50));` |**
+
+**|   FOREIGN KEY   | Ensures values match an existing value in another table's primary key.   | `FOREIGN KEY (CustomerID) REFERENCES Customers(ID);`             |**
+
+**|   CHECK         | Ensures that values in a column satisfy a specific condition.            | `CHECK (Age >= 18);`                                             |**
+
+**|   DEFAULT       | Sets a default value if none is provided for a column.                   | `DEFAULT 'Active';`                                              |**
+
+**|   KEYS          | Defines indexing and relationship rules like primary key \& foreign key.  | `PRIMARY KEY (OrderID)`                                          |**
+
+
+
+
+
+##### **Filtering \& Conditions**
+
+
+
+**| Keyword      |                   Definition                    |                            Example                                  |**
+
+**| ------------ | ----------------------------------------------- | ------------------------------------------------------------------- |**
+
+**| \*\*WHERE\*\*    | Filters rows based on a condition.              | `SELECT \* FROM Products WHERE Price > 100;`                         |**
+
+**| \*\*AND\*\*      | Combines multiple conditions; all must be true. | `SELECT \* FROM Products WHERE Price > 100 AND Stock > 10;`          |**
+
+**| \*\*IN\*\*       | Matches a value in a list.                      | `SELECT \* FROM Products WHERE Category IN ('Electronics','Books');` |**
+
+**| \*\*NOT IN\*\*   | Matches values not in a list.                   | `SELECT \* FROM Products WHERE Category NOT IN ('Clothes');`         |**
+
+**| \*\*BETWEEN\*\*  | Checks if a value is within a range.            | `SELECT \* FROM Products WHERE Price BETWEEN 100 AND 500;`           |**
+
+**| \*\*LIKE\*\*     | Matches patterns with wildcards.                | `SELECT \* FROM Products WHERE Name LIKE 'S%';`                      |**
+
+**| \*\*NULL\*\*     | Checks for missing values.                      | `SELECT \* FROM Products WHERE Discount IS NULL;`                    |**
+
+**| \*\*NOT NULL\*\* | Ensures the value exists.                       | `SELECT \* FROM Products WHERE Name IS NOT NULL;`                    |**
+
+
+
+##### **Sorting \& Ordering**
+
+
+
+**| Keyword      |                        Definition                         |              Example                          |**
+
+**| ------------ | --------------------------------------------------------- | --------------------------------------------- |**
+
+**| \*\*ORDER BY\*\* | Sorts results in ascending (default) or descending order. | `SELECT \* FROM Products ORDER BY Price;`      |**
+
+**| \*\*DESC\*\*     | Sorts results in descending order.                        | `SELECT \* FROM Products ORDER BY Price DESC;` |**
+
+
+
+##### **Output Control**
+
+**| Keyword      |                   Definition                 |                Example                      |**
+
+**| ------------ | -------------------------------------------- | ------------------------------------------- |**
+
+**| \*\*DISTINCT\*\* | Returns unique results, removing duplicates. | `SELECT DISTINCT Category FROM Products;`   |**
+
+**| \*\*AS\*\*       | Gives an alias to a column or table.         | `SELECT Name AS ProductName FROM Products;` |**
+
+
+
+
+
+##### **SQL Aggregate Functions**
+
+
+
+SQL Aggregate Functions are predefined functions that perform calculations on a set of values (rows) and return a single summarized value.
+
+
+
+**| Function    |                       Definition                             |                         Example                                   |**
+
+**| ----------- | ------------------------------------------------------------ | ----------------------------------------------------------------- |**
+
+**| \*\*COUNT()\*\* | Returns the number of rows (or non-NULL values) in a column. | `SELECT COUNT(\*) FROM Products WHERE Category = 'Electronics';`   |**
+
+**| \*\*SUM()\*\*   | Returns the total sum of a numeric column.                   | `SELECT SUM(Price) FROM Products WHERE Category = 'Electronics';` |**
+
+**| \*\*AVG()\*\*   | Returns the average value of a numeric column.               | `SELECT AVG(Price) FROM Products WHERE Stock > 50;`               |**
+
+**| \*\*MIN()\*\*   | Returns the smallest value in a column.                      | `SELECT MIN(Price) FROM Products WHERE Category = 'Books';`       |**
+
+**| \*\*MAX()\*\*   | Returns the largest value in a column.                       | `SELECT MAX(Price) FROM Products WHERE Category = 'Clothes';`     |**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##### 
+
