@@ -11,9 +11,9 @@ Data in SQL is organized in a relational database, which uses tables to store in
 
 🔹 Example Table: Students
 
-ID	Name	Age	Grade
-1	Alice	20	A
-2	Bob	22	B
+| ID	| Name	| Age	| Grade |
+|  1	| Alice	| 20	|   A	|
+|  2	| Bob	| 22	|   B	|
 
 ID: Unique identifier (usually an integer)
 Name: Student’s name (text)
